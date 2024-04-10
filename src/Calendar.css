@@ -1,0 +1,80 @@
+/* Calendar.css */
+.calendar {
+    width: 100%;
+  }
+  
+  .month-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .month-name {
+    margin: 0 20px;
+    font-size: 24px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .grid-cell {
+    border: 1px solid #ccc;
+    width: 150px;
+    height: 100px; /* Adjust the height as desired */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .day-heading {
+    height: 50px; /* Half the height of grid cells */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-bottom: 10px;
+  }
+  
+  .other-month {
+    color: #aaa; /* Gray font color */
+  }
+
+  .event-bar {
+    background-color: #007bff; 
+    color: white; 
+    position: absolute;
+    height: 20px; 
+    width: 140px;
+    border-radius: 5px; 
+    padding: 5px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .event-bar:hover {
+    background-color: #007bffb5;
+  }
+
+  .event-details {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  

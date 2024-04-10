@@ -4,9 +4,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Index;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(indexes = {@Index(name = "idx_start_time", columnList = "startTime")})
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

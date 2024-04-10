@@ -4,8 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
 
 @Entity
+@Table(indexes = {@Index(name = "idx_eventid", columnList = "eventId")})
 public class Attendee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

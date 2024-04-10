@@ -3,9 +3,12 @@ package com.calendar.scheduler.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+import jakarta.persistence.Index;
 import jakarta.persistence.Id;
 
 @Entity
+@Table(indexes = {@Index(name = "idx_username", columnList = "username")})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
